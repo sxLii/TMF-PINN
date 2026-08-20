@@ -18,16 +18,16 @@ Development of the primary branch is organized into the following five stages:
 - [x] **PyTorch version**  
    Original PINN Version implemented in TensorFlow 1.15.x.
 
-- [x] **Single experimental-case validation**  
+- [ ] **Single experimental-case validation**  
    Validate the PyTorch implementation on a single experimental case.
 
-- [x] **Nodal treatment**  
+- [ ] **Nodal treatment**  
    Extend the framework to handle nodal variables, junction conditions, and related boundary conditions.
 
-- [x] **Graph neural network integration**  
+- [ ] **Graph neural network integration**  
    Incorporate graph neural networks to represent sewer-network topology and interactions between pipes and nodes.
 
-- [x] **Large-scale system application**  
+- [ ] **Large-scale system application**  
    Scale the framework to larger and more complex sewer-network systems.
 
 The primary development branch is under active development. APIs, training procedures, and data formats may change as each stage is completed.
