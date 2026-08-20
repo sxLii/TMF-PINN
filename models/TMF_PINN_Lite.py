@@ -305,7 +305,7 @@ class SVE:
         return eq1, eq2
         
     def fun_r_mass(self, u, h, h_t, h_x, u_x,alpha):
-        ht = tf.clip_by_value(h, clip_value_min=1e-4, clip_value_max=self.D - 1e12)
+        ht = tf.clip_by_value(h, clip_value_min=1e-4, clip_value_max=self.D - 1e-12)
         theta = 2 * tf.acos(1 - 2 * ht / self.D)
         theta = tf.clip_by_value(theta, clip_value_min=1e-3, clip_value_max=1.96 * np.pi)
         A_B = self.D / 8 * (theta - tf.sin(theta)) / tf.cos(theta / 4)
@@ -313,7 +313,7 @@ class SVE:
 
     def fun_r_momentum(self, u, h, u_t, u_x, h_x,alpha):
         n = self.nm
-        ht = tf.clip_by_value(h, clip_value_min=1e-4, clip_value_max=self.D - 1e12)
+        ht = tf.clip_by_value(h, clip_value_min=1e-4, clip_value_max=self.D - 1e-12)
         theta = 2 * tf.acos(1 - 2 * ht / self.D)
         theta = tf.clip_by_value(theta, clip_value_min=1e-3, clip_value_max=1.96 * np.pi)
         R = self.D / 4 * alpha + (1 - alpha) * self.D / 4 * (1 - tf.sin(theta) / theta)
