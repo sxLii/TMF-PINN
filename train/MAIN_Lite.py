@@ -133,7 +133,7 @@ for i in range(6):
 
     ind_obs_hintp = [0]
     for iobs in ind_obs_hintp:
-        if np.isnan(add_noise(uuuobs[:Nt_train, 0])).any:
+        if np.isnan(add_noise(uuuobs[:Nt_train, 0])).any():
             u_obs = np.append(u_obs, (uuuobs[:Nt_train, iobs]))
         else:
             u_obs = np.append(u_obs, add_noise(uuuobs[:Nt_train, iobs]))
@@ -150,7 +150,7 @@ for i in range(6):
     for iobs in ind_obs_h:
         t_obs_h = np.append(t_obs_h, t.flatten())
         x_obs_h = np.append(x_obs_h, np.ones(Nt_train) * x[iobs])
-        if np.isnan(add_noise(h_exact[:Nt_train, 0])).any:
+        if np.isnan(add_noise(h_exact[:Nt_train, 0])).any():
             h_obs = np.append(h_obs, h_exact[:Nt_train, iobs])
         else:
             h_obs = np.append(h_obs, add_noise(h_exact[:Nt_train, iobs]))
